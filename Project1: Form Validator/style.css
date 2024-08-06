@@ -1,0 +1,103 @@
+
+:root {
+    --suc-clr:#2ecc71;
+    --err-clr:#e74c3c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: #f9fbf9;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    border: 0px solid black ;
+    background-color: rgb(230, 241, 241);
+    border-radius: 5px;
+    /* box-shadow: 0px 3px 15px 3px rgba(0,0,0,0.7); */
+    box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.3), inset 0px 2px 100px rgba(182, 122, 122, 0.5);
+    width: 400px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.form{
+    padding: 30px 40px;
+}
+
+.form-whole {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.form-whole label {
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+    /* font-weight: 500; */
+}
+
+.form-whole input {
+    display: block;
+    width: 100%;
+    margin-bottom: 13px;
+    padding: 10px;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.form-whole input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-whole.success input{
+    border-color: var(--suc-clr);
+}
+
+.form-whole.error input{
+    border-color: var(--err-clr);
+}
+
+.form-whole small {
+    color: var(--err-clr);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+
+.form-whole.error small{
+    visibility: visible;
+}
+
+button{
+    cursor: pointer;
+    color: white;
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #3498db;
+}
+
+
+
