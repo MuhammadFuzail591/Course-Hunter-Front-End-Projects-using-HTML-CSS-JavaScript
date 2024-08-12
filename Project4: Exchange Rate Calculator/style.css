@@ -1,0 +1,80 @@
+:root{
+    --primary-clr:#5fbaa7;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+h1{
+    color: var(--primary-clr);
+    font-family: "Black Ops One", system-ui;
+}
+
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Oswald", sans-serif;
+}
+
+.btn{
+    color: #fff;
+    background-color: var(--primary-clr);
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.currency{
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.currency select{
+    padding: 5px 10px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.currency input{
+    font-size: 30px;
+    text-align: right;
+    border-radius: 10px ;
+    padding: 5px 0;
+    background: transparent;
+    border: 0.5px solid var(--primary-clr);
+}
+
+.swap-rate-container{
+    color: var(--primary-clr);
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width:600px){
+    .currency input {
+        width: 200px ;
+    }
+}
