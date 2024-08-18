@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Black+Ops+One&family=Oswald:wght@200..700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <title>Meal Finder</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Meal Finder</h1>
+        <div class="flex">
+            <form class="flex-form" id="submit">
+                <input 
+                type="text" 
+                id="search" 
+                title="Enter text here" 
+                placeholder="Search For Meals or Keywords"
+                />
+                <small id="small-tag" class="small-tag">Empty field...!!!</small>
+                <button class="search-btn" id="search" type="submit" title="Search"><i class="ri-search-line"></i></button>  
+            </form>
+            <button class="random-btn" id="random" title="Random Search" ><i class="ri-dice-line"></i></button>
+        </div>
+
+        <div id="result-heading"></div>
+        <div id="mealsid" class="mealscl"></div>
+        <div id="single-meal"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
