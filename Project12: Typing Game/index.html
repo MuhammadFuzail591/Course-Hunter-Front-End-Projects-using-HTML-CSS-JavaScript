@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Typing Game</title>
+</head>
+<body>
+    <button id="settings-btn" class="settings-btn">
+        <i class="ri-settings-5-line"></i>
+    </button>
+    <div class="settings" id="settings">
+        <form id="settings-form">
+            <div id="select-div">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty" class="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </form>
+    </div>
 
+    <div class="container" id="container">
+        <h2>Speed Typer</h2>
+        <small>Type the Following:</small>
+        <h1 id="word"></h1>
+        <input type="text" id="text" autocomplete="off" placeholder="Type the word here...">
+        <p class="time-container">
+            Time Left: <span id="time">10s</span>
+        </p>
+        <p class="score-container">
+            Score: <span id="score">0</span>
+        </p>
+
+        <div id="end-game-container" class="end-game-container"></div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
