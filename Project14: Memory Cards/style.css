@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     height: 100vh;
+     overflow: hidden;
+}
+h1{
+    position: relative;
+}
+h1 button{
+    position: absolute;
+    right: 0;
+    transform: translate(120%,-50%);
+    z-index: 2;
+}
+.clear{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
+.btn{
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: 0.5px solid #aaa;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-small{
+    font-size: 12px;
+    padding: 5px 10px;
+}
+.btn-ghost{
+    border: 0;
+    background-color: transparent;
+}
+#clear, #add-card{
+    box-shadow: 0 2px 5px rgb(104, 43, 43);
+    transition: transform 0.3s ease;
+}
+#clear:active,#add-card:active,.nav-button:active{
+    transform: scale(0.95);
+}
+
+.cards-container{
+    perspective: 1000px;
+    /* background-color: blueviolet; */
+    width: 30vw;
+    position: relative;
+    height: 35vh;
+    max-width: 100%;
+    
+}
+.card{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    font-size: 1.5em;
+    width: 100%;
+    height: 100%;
+    transform: translateX(50%) rotateY(-10deg);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    /* background-color: violet; */
+}
+.card.active{
+    opacity: 1;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateX(0) rotateY(0deg);
+}
+.card.left{
+    transform: translateX(-50%) rotateY(10deg);
+}
+.card.right{
+    transform: translateX(50%) rotateY(-10deg);
+}
+.inner-card{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    position: relative;
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+}
+.card.show-answer .inner-card{
+    transform: rotateX(180deg);
+}
+.inner-card-front, .inner-card-back{
+    backface-visibility: hidden;
+    background-color: #fff;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: 'Patrick Hand', sans-serif;
+
+}
+.inner-card p{
+    font-family: 'Patrick Hand', sans-serif;
+}
+.inner-card-front::after, .inner-card-back::after{
+    content: "Flip";
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: #ada4a4;
+}
+.inner-card-front{
+    transform: rotateX(0deg);
+    z-index: 2;
+    
+}
+.inner-card-back{
+    transform: rotateX(180deg);
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.nav-button{
+    padding: 5px;
+    background-color: transparent;
+    border: 0; 
+    font-weight: bold;
+    font-size: 20px;  
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+.nav-button:active{
+    transform: scale(0.90);
+}
+.nav-button:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.add-container{
+    background-color: #f0f0f0;
+    opacity: 0; 
+    z-index: -1;
+    border-top: 2px solid #eee;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition:all 0.3s ease;
+}
+.add-container.show{
+    opacity: 1;
+    z-index: 2;
+}
+.add-container label{
+    display: block;
+    /* margin-bottom: 5px; */
+    margin: 15px 0 10px;
+    font-weight: bold;
+}
+.add-container textarea{
+    width: 100%;
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    min-width: 500px;  
+}
