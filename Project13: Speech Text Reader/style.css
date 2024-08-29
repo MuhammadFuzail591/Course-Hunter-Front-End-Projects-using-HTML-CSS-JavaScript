@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffefea;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    text-align: center;
+}
+.btn{
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: darksalmon;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    transition: transform 0.2s ease;
+}
+.btn:active{
+    transform: scale(0.95);
+}
+select:focus{
+    outline: 0;
+}
+.btn-toggle{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.text-box{
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    width:60vw;
+    top: 30%;
+    left: 50%;
+    min-width: 300px;
+    transition: transform 1s ease-in-out;
+    transform: translate(-50%,-220%);
+    padding: 20px;
+    z-index: 1;
+}
+.text-box h3{
+    margin: 15px 0 5px 0;
+}
+.text-box select{
+    background: darksalmon;
+    width: 100%;
+    font-size: 18px;
+    border: 0;
+    border-radius: 3px;
+    margin: 0 0 5px 0;
+}
+.text-box.show{
+    transform: translate(-50%,10%);
+}
+.text-box #text{
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    height: 120px;
+    font-size: 16px;
+}
+#text:focus, select:focus{
+    outline: 0;
+}
+.text-box .btn{
+    width: 100%;
+    margin-top: 5px;
+}
+.text-box .close{
+    float: right;
+    text-align: center;
+    cursor: pointer;
+}
+
+main{
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+.box{
+    box-shadow: 0 10px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    /* padding: 15px; */
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+    transition: box-shadow 0.3s ease-out;
+    overflow: hidden;
+}
+.box.active{
+    transform: scale(0.95);
+    box-shadow: 0 0 10px 5px darksalmon ;
+}
+
+.box img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.box .info{
+    padding: 10px;
+    color: #fff;
+    background-color: darksalmon;
+    height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+
+
+@media (max-width:1100px){
+    main{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width:760px){
+    main{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:500px){
+    main{
+        grid-template-columns: 1fr;
+    }
+}
